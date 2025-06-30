@@ -1,0 +1,54 @@
+
+
+<!-- README.md is generated from README.qmd. Please edit that file -->
+
+# Vectorised Statistics with Composite Data Types
+
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+Slides and notes for a presentation about vectorised statistics at ASC
+2025 (December 2025).
+
+<!-- A recording of this presentation is available on YouTube here: <https://www.youtube.com/watch?v=> -->
+
+<!-- [![](preview.jpg)](https://www.youtube.com/watch?v=) -->
+
+#### Abstract
+
+Statistical analysis on temporal, spatial, graph, and probabilistic data
+requires special care to appropriately handle their intrinsic structure.
+Outputs from models typically return these composite data types
+separately, requiring the user to assemble and apply the results
+correctly. This reduces the accessibility of statistics and results in
+error-prone analysis. Representing these data types using composite
+vector types makes statistical operations and data analysis easier.
+
+In this talk, I will introduce the application of vectorised statistical
+operations across common dimensions not otherwise handled in traditional
+data structures. The vectors of vectors data type implemented in the
+vecvec R package is foundational for creating efficient mixed data
+types. The distributional and mixtime R packages leverage vecvec in
+order to create vectors that mix different distributions and temporal
+granularities together. Storing distributions with different shapes and
+parameterisations together in the same vector abstracts away the data
+handling complexity while providing a user-friendly interface for
+calculating distributional statistics such as the mean, quantiles, and
+densities. Similarly, storing time at different granularities allows
+combining data from different sources and facilitates forecasts across
+multiple levels of temporal aggregation.
+
+Combinations of these data types in a rectangular ‘tidy’ data structure
+allow for the flexible application of
+probabilistic-spatio-temporal-graph data analysis. For instance, the
+combination of temporal and distributional vectors provides a dataset
+suitable for working with time series forecasts.
+
+#### Structure
+
+…
+
+### Format
+
+Oral presentation
