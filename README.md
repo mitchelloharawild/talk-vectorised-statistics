@@ -11,9 +11,10 @@
 Slides and notes for a presentation about vectorised statistics at ASC
 2025 (December 2025).
 
-<!-- A recording of this presentation is available on YouTube here: <https://www.youtube.com/watch?v=> -->
+A recording of this presentation is available on YouTube here:
+<https://youtu.be/qkt4QSJnLwY>
 
-<!-- [![](preview.jpg)](https://www.youtube.com/watch?v=) -->
+[![](preview.jpg)](https://www.youtube.com/watch?v=qkt4QSJnLwY)
 
 #### Abstract
 
