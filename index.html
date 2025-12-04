@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="index_files/libs/clipboard/clipboard.min.js"></script>
-<script src="index_files/libs/quarto-html/tabby.min.js"></script>
-<script src="index_files/libs/quarto-html/popper.min.js"></script>
-<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<link href="index_files/libs/quarto-contrib/custom-callouts-0.1.0/custom-callouts.scss" rel="stylesheet"><meta charset="utf-8">
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-contrib/custom-callouts-0.1.0/custom-callouts.scss" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.26">
 
   <title>index</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -95,11 +95,11 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-cdae25d43113c4f2a380dcfe68d8843f.css">
-  <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-cdae25d43113c4f2a380dcfe68d8843f.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -236,19 +236,19 @@
 <h3 id="vectorised-statistics">Vectorised statistics</h3>
 <div class="fragment fade-in">
 <p>Most programming languages require using <strong>explicit loops</strong> for statistics on vectors.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource c number-lines code-with-copy"><code class="sourceCode c"><span id="cb1-1"><a href=""></a><span class="co">// C code for a log transformation</span></span>
-<span id="cb1-2"><a href=""></a><span class="dt">double</span> x<span class="op">[]</span> <span class="op">=</span> <span class="op">{</span><span class="fl">1.0</span><span class="op">,</span> <span class="fl">2.0</span><span class="op">,</span> <span class="fl">3.0</span><span class="op">,</span> <span class="fl">4.0</span><span class="op">,</span> <span class="fl">5.0</span><span class="op">};</span></span>
-<span id="cb1-3"><a href=""></a><span class="dt">size_t</span> n <span class="op">=</span> <span class="kw">sizeof</span><span class="op">(</span>x<span class="op">)</span> <span class="op">/</span> <span class="kw">sizeof</span><span class="op">(</span>x<span class="op">[</span><span class="dv">0</span><span class="op">]);</span></span>
-<span id="cb1-4"><a href=""></a></span>
-<span id="cb1-5"><a href=""></a><span class="cf">for</span> <span class="op">(</span><span class="dt">size_t</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> n<span class="op">;</span> <span class="op">++</span>i<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb1-6"><a href=""></a>  x<span class="op">[</span>i<span class="op">]</span> <span class="op">=</span> log<span class="op">(</span>x<span class="op">[</span>i<span class="op">]);</span></span>
-<span id="cb1-7"><a href=""></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource c number-lines code-with-copy"><code class="sourceCode c"><span id="cb1-1"><a></a><span class="co">// C code for a log transformation</span></span>
+<span id="cb1-2"><a></a><span class="dt">double</span> x<span class="op">[]</span> <span class="op">=</span> <span class="op">{</span><span class="fl">1.0</span><span class="op">,</span> <span class="fl">2.0</span><span class="op">,</span> <span class="fl">3.0</span><span class="op">,</span> <span class="fl">4.0</span><span class="op">,</span> <span class="fl">5.0</span><span class="op">};</span></span>
+<span id="cb1-3"><a></a><span class="dt">size_t</span> n <span class="op">=</span> <span class="kw">sizeof</span><span class="op">(</span>x<span class="op">)</span> <span class="op">/</span> <span class="kw">sizeof</span><span class="op">(</span>x<span class="op">[</span><span class="dv">0</span><span class="op">]);</span></span>
+<span id="cb1-4"><a></a></span>
+<span id="cb1-5"><a></a><span class="cf">for</span> <span class="op">(</span><span class="dt">size_t</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> n<span class="op">;</span> <span class="op">++</span>i<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-6"><a></a>  x<span class="op">[</span>i<span class="op">]</span> <span class="op">=</span> log<span class="op">(</span>x<span class="op">[</span>i<span class="op">]);</span></span>
+<span id="cb1-7"><a></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment fade-in">
 <p>Languages used for statistical computing have <strong>vectorised operations</strong> (implicit loops).</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="co"># R code for a log transformation</span></span>
-<span id="cb2-2"><a href=""></a><span class="fu">log</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># R code for a log transformation</span></span>
+<span id="cb2-2"><a></a><span class="fu">log</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.0000000 0.6931472 1.0986123 1.3862944 1.6094379</code></pre>
 </div>
@@ -327,21 +327,21 @@
 <h3 id="safer-statistics-with-semantics">Safer statistics with semantics</h3>
 <p>Statistical operations leverage their structure to prevent analysis that violate semantics.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a>Jan31 <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="st">"2025-01-31"</span>)</span>
-<span id="cb4-2"><a href=""></a></span>
-<span id="cb4-3"><a href=""></a>Jan31 <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>Jan31 <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="st">"2025-01-31"</span>)</span>
+<span id="cb4-2"><a></a></span>
+<span id="cb4-3"><a></a>Jan31 <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2025-02-01"</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a>Jan31 <span class="sc">*</span> <span class="dv">2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>Jan31 <span class="sc">*</span> <span class="dv">2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-error">
 <pre><code>Error in Ops.Date(Jan31, 2): * not defined for "Date" objects</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a><span class="fu">log</span>(Jan31)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">log</span>(Jan31)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-error">
 <pre><code>Error in Math.Date(Jan31): log not defined for "Date" objects</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a>Jan31 <span class="sc">+</span> lubridate<span class="sc">::</span><span class="fu">period</span>(<span class="dv">1</span>, <span class="st">"months"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>Jan31 <span class="sc">+</span> lubridate<span class="sc">::</span><span class="fu">period</span>(<span class="dv">1</span>, <span class="st">"months"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] NA</code></pre>
 </div>
@@ -459,8 +459,8 @@
 <p><span class="fragment fade-in"><strong><em>How</em></strong> these functions vectorise inputs is surprising <span class="emoji" data-emoji="ghost">👻</span></span></p>
 <div class="fragment fade-in">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a><span class="co"># 95% intervals from N(1,9)</span></span>
-<span id="cb13-2"><a href=""></a><span class="fu">qnorm</span>(<span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>), <span class="at">mean =</span> <span class="dv">1</span>, <span class="at">sd =</span> <span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="co"># 95% intervals from N(1,9)</span></span>
+<span id="cb13-2"><a></a><span class="fu">qnorm</span>(<span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>), <span class="at">mean =</span> <span class="dv">1</span>, <span class="at">sd =</span> <span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] -4.879892  6.879892</code></pre>
 </div>
@@ -468,8 +468,8 @@
 </div>
 <div class="fragment fade-in">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a><span class="co"># 2.5% from N(1,9) and 97.5% from N(1,16)</span></span>
-<span id="cb15-2"><a href=""></a><span class="fu">qnorm</span>(<span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>), <span class="at">mean =</span> <span class="dv">1</span>, <span class="at">sd =</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">4</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="co"># 2.5% from N(1,9) and 97.5% from N(1,16)</span></span>
+<span id="cb15-2"><a></a><span class="fu">qnorm</span>(<span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>), <span class="at">mean =</span> <span class="dv">1</span>, <span class="at">sd =</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">4</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] -4.879892  8.839856</code></pre>
 </div>
@@ -477,8 +477,8 @@
 </div>
 <div class="fragment fade-in">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href=""></a><span class="co"># W̷͌͘h̵̕͘a̶̚͠t̷͘͠ ̷̈́͝i̴͠͠s̴͝͝ ̶̀̕h̷́͠á̶͝p̷͝͝p̴̀͝e̶͘͠n̷͝͝i̸̕͠n̵͝͠g̷̀͝ ̶́͠h̷́͠è̴͘ŕ̷͠e̵͝͝⸘</span></span>
-<span id="cb17-2"><a href=""></a><span class="fu">qnorm</span>(<span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>), <span class="at">mean =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), <span class="at">sd =</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="co"># W̷͌͘h̵̕͘a̶̚͠t̷͘͠ ̷̈́͝i̴͠͠s̴͝͝ ̶̀̕h̷́͠á̶͝p̷͝͝p̴̀͝e̶͘͠n̷͝͝i̸̕͠n̵͝͠g̷̀͝ ̶́͠h̷́͠è̴͘ŕ̷͠e̵͝͝⸘</span></span>
+<span id="cb17-2"><a></a><span class="fu">qnorm</span>(<span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>), <span class="at">mean =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), <span class="at">sd =</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] -4.879892  9.839856 -8.799820</code></pre>
 </div>
@@ -517,11 +517,11 @@
 <div class="callout-content">
 <p>Consider the output when using <code>predict()</code> on a <code>lm()</code> for the length of penguin bills using depth and species.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href=""></a>fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
-<span id="cb19-2"><a href=""></a>  bill_length_mm <span class="sc">~</span> species<span class="sc">*</span>bill_depth_mm, </span>
-<span id="cb19-3"><a href=""></a>  <span class="at">data =</span> palmerpenguins<span class="sc">::</span>penguins</span>
-<span id="cb19-4"><a href=""></a>)</span>
-<span id="cb19-5"><a href=""></a><span class="fu">predict</span>(fit, <span class="fu">tail</span>(palmerpenguins<span class="sc">::</span>penguins))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
+<span id="cb19-2"><a></a>  bill_length_mm <span class="sc">~</span> species<span class="sc">*</span>bill_depth_mm, </span>
+<span id="cb19-3"><a></a>  <span class="at">data =</span> palmerpenguins<span class="sc">::</span>penguins</span>
+<span id="cb19-4"><a></a>)</span>
+<span id="cb19-5"><a></a><span class="fu">predict</span>(fit, <span class="fu">tail</span>(palmerpenguins<span class="sc">::</span>penguins))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       1        2        3        4        5        6 
 46.10333 51.48517 48.21763 48.40983 49.94750 49.37088 </code></pre>
@@ -565,8 +565,8 @@
 <div class="callout-content">
 <p>Use <code>se.fit = TRUE</code> in <code>predict()</code> to get standard errors.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href=""></a><span class="fu">predict</span>(fit, <span class="fu">tail</span>(palmerpenguins<span class="sc">::</span>penguins), </span>
-<span id="cb21-2"><a href=""></a>        <span class="at">se.fit =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">predict</span>(fit, <span class="fu">tail</span>(palmerpenguins<span class="sc">::</span>penguins), </span>
+<span id="cb21-2"><a></a>        <span class="at">se.fit =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$fit
        1        2        3        4        5        6 
@@ -598,12 +598,12 @@ $residual.scale
 <h3 id="unsafe-stats-rs-distributions-5">Unsafe Stats: R’s distributions</h3>
 <p>Here’s the code to obtain 95% prediction intervals for the penguins data:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href=""></a>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(fit, <span class="fu">tail</span>(palmerpenguins<span class="sc">::</span>penguins), <span class="at">se.fit =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb23-2"><a href=""></a><span class="fu">sprintf</span>(</span>
-<span id="cb23-3"><a href=""></a>  <span class="st">"[%f, %f]95"</span>,</span>
-<span id="cb23-4"><a href=""></a>  pred<span class="sc">$</span>fit <span class="sc">+</span> <span class="fu">qt</span>(<span class="fl">0.025</span>, <span class="at">df =</span> pred<span class="sc">$</span>df) <span class="sc">*</span> pred<span class="sc">$</span>se.fit,</span>
-<span id="cb23-5"><a href=""></a>  pred<span class="sc">$</span>fit <span class="sc">+</span> <span class="fu">qt</span>(<span class="fl">0.975</span>, <span class="at">df =</span> pred<span class="sc">$</span>df) <span class="sc">*</span> pred<span class="sc">$</span>se.fit</span>
-<span id="cb23-6"><a href=""></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(fit, <span class="fu">tail</span>(palmerpenguins<span class="sc">::</span>penguins), <span class="at">se.fit =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb23-2"><a></a><span class="fu">sprintf</span>(</span>
+<span id="cb23-3"><a></a>  <span class="st">"[%f, %f]95"</span>,</span>
+<span id="cb23-4"><a></a>  pred<span class="sc">$</span>fit <span class="sc">+</span> <span class="fu">qt</span>(<span class="fl">0.025</span>, <span class="at">df =</span> pred<span class="sc">$</span>df) <span class="sc">*</span> pred<span class="sc">$</span>se.fit,</span>
+<span id="cb23-5"><a></a>  pred<span class="sc">$</span>fit <span class="sc">+</span> <span class="fu">qt</span>(<span class="fl">0.975</span>, <span class="at">df =</span> pred<span class="sc">$</span>df) <span class="sc">*</span> pred<span class="sc">$</span>se.fit</span>
+<span id="cb23-6"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -640,12 +640,12 @@ $residual.scale
 <h3 id="unsafe-stats-rs-distributions-6">Unsafe Stats: R’s distributions</h3>
 <p>The correct code for <strong>prediction intervals</strong> is:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href=""></a>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(fit, <span class="fu">tail</span>(palmerpenguins<span class="sc">::</span>penguins), <span class="at">se.fit =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb25-2"><a href=""></a><span class="fu">sprintf</span>(</span>
-<span id="cb25-3"><a href=""></a>  <span class="st">"[%f, %f]95"</span>,</span>
-<span id="cb25-4"><a href=""></a>  pred<span class="sc">$</span>fit <span class="sc">+</span> <span class="fu">qt</span>(<span class="fl">0.025</span>, <span class="at">df =</span> pred<span class="sc">$</span>df) <span class="sc">*</span> <span class="fu">sqrt</span>(pred<span class="sc">$</span>se.fit<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> pred<span class="sc">$</span>residual.scale<span class="sc">^</span><span class="dv">2</span>),</span>
-<span id="cb25-5"><a href=""></a>  pred<span class="sc">$</span>fit <span class="sc">+</span> <span class="fu">qt</span>(<span class="fl">0.975</span>, <span class="at">df =</span> pred<span class="sc">$</span>df) <span class="sc">*</span> <span class="fu">sqrt</span>(pred<span class="sc">$</span>se.fit<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> pred<span class="sc">$</span>residual.scale<span class="sc">^</span><span class="dv">2</span>)</span>
-<span id="cb25-6"><a href=""></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(fit, <span class="fu">tail</span>(palmerpenguins<span class="sc">::</span>penguins), <span class="at">se.fit =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb25-2"><a></a><span class="fu">sprintf</span>(</span>
+<span id="cb25-3"><a></a>  <span class="st">"[%f, %f]95"</span>,</span>
+<span id="cb25-4"><a></a>  pred<span class="sc">$</span>fit <span class="sc">+</span> <span class="fu">qt</span>(<span class="fl">0.025</span>, <span class="at">df =</span> pred<span class="sc">$</span>df) <span class="sc">*</span> <span class="fu">sqrt</span>(pred<span class="sc">$</span>se.fit<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> pred<span class="sc">$</span>residual.scale<span class="sc">^</span><span class="dv">2</span>),</span>
+<span id="cb25-5"><a></a>  pred<span class="sc">$</span>fit <span class="sc">+</span> <span class="fu">qt</span>(<span class="fl">0.975</span>, <span class="at">df =</span> pred<span class="sc">$</span>df) <span class="sc">*</span> <span class="fu">sqrt</span>(pred<span class="sc">$</span>se.fit<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> pred<span class="sc">$</span>residual.scale<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb25-6"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -683,9 +683,9 @@ $residual.scale
 <h3 id="a-better-alternative">A better alternative?</h3>
 <div class="fragment fade-in">
 <p>What if model predictions could directly produce a vector of distributions?</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href=""></a><span class="co"># Hypothetical predict() method for lm()</span></span>
-<span id="cb27-2"><a href=""></a>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(fit, <span class="fu">tail</span>(palmerpenguins<span class="sc">::</span>penguins))</span>
-<span id="cb27-3"><a href=""></a>pred</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="co"># Hypothetical predict() method for lm()</span></span>
+<span id="cb27-2"><a></a>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(fit, <span class="fu">tail</span>(palmerpenguins<span class="sc">::</span>penguins))</span>
+<span id="cb27-3"><a></a>pred</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;distribution[6]&gt;
@@ -696,7 +696,7 @@ $residual.scale
 </div>
 <div class="fragment fade-in">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href=""></a><span class="fu">hilo</span>(pred, <span class="dv">95</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">hilo</span>(pred, <span class="dv">95</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;hilo[6]&gt;
 [1] [41.20388, 51.00279]95 [46.58886, 56.38147]95
@@ -724,7 +724,7 @@ $residual.scale
 <p>Vectors add attributes to existing vector types.</p>
 <p>e.g.&nbsp;<code>POSIXct</code> is the seconds since 1970-01-01.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href=""></a><span class="fu">unclass</span>(<span class="fu">as.POSIXct</span>(<span class="st">"2025-12-04 11:00:00"</span>)) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">unclass</span>(<span class="fu">as.POSIXct</span>(<span class="st">"2025-12-04 11:00:00"</span>)) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1764817200
 attr(,"tzone")
@@ -737,8 +737,8 @@ attr(,"tzone")
 <div class="fragment fade-in">
 <p>This enables single-parameter distributions:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href=""></a><span class="fu">library</span>(distributional)</span>
-<span id="cb33-2"><a href=""></a><span class="fu">dist_poisson</span>(<span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">6</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a><span class="fu">library</span>(distributional)</span>
+<span id="cb33-2"><a></a><span class="fu">dist_poisson</span>(<span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">6</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;distribution[3]&gt;
 [1] Pois(4) Pois(2) Pois(6)</code></pre>
@@ -768,7 +768,7 @@ attr(,"tzone")
 <p>e.g.&nbsp;<code>POSIXlt</code> contains the parts of a datetime.</p>
 <div class="fragment fade-out" data-fragment-index="1">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href=""></a><span class="fu">unclass</span>(<span class="fu">as.POSIXlt</span>(<span class="st">"2025-12-04 11:00:00"</span>)) <span class="sc">|&gt;</span> <span class="fu">str</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">unclass</span>(<span class="fu">as.POSIXlt</span>(<span class="st">"2025-12-04 11:00:00"</span>)) <span class="sc">|&gt;</span> <span class="fu">str</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 11
  $ sec   : num 0
@@ -793,8 +793,8 @@ attr(,"tzone")
 <div class="fragment fade-up" data-fragment-index="1">
 <p>This enables multi-parameter distributions:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href=""></a><span class="fu">library</span>(distributional)</span>
-<span id="cb37-2"><a href=""></a><span class="fu">dist_normal</span>(<span class="at">mu =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="sc">-</span><span class="dv">1</span>), <span class="at">sigma =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">4</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="fu">library</span>(distributional)</span>
+<span id="cb37-2"><a></a><span class="fu">dist_normal</span>(<span class="at">mu =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="sc">-</span><span class="dv">1</span>), <span class="at">sigma =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">4</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;distribution[3]&gt;
 [1] N(1, 9)   N(3, 4)   N(-1, 16)</code></pre>
@@ -822,8 +822,8 @@ attr(,"tzone")
 <div class="callout-content">
 <p>These vectors mix different vector types together.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href=""></a><span class="fu">library</span>(vecvec)</span>
-<span id="cb39-2"><a href=""></a><span class="fu">vecvec</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), <span class="fu">c</span>(<span class="st">"a"</span>,<span class="st">"b"</span>), <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a><span class="fu">library</span>(vecvec)</span>
+<span id="cb39-2"><a></a><span class="fu">vecvec</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), <span class="fu">c</span>(<span class="st">"a"</span>,<span class="st">"b"</span>), <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;vecvec[6]&gt;
 [1] 1     2     a     b      TRUE FALSE</code></pre>
@@ -854,8 +854,8 @@ attr(,"tzone")
 <h3 id="mixed-type-vectors-1">Mixed-type vectors</h3>
 <p><img data-src="media/vecvec.svg" class="sticker-float-midright"></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href=""></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb41-2"><a href=""></a>household</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb41-2"><a></a>household</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 5
   family dob_child1 dob_child2 name_child1 name_child2
@@ -877,12 +877,12 @@ attr(,"tzone")
 <h3 id="mixed-type-vectors-2">Mixed-type vectors</h3>
 <p><img data-src="media/vecvec.svg" class="sticker-float-midright"></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href=""></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb43-2"><a href=""></a>household <span class="sc">|&gt;</span> </span>
-<span id="cb43-3"><a href=""></a>  <span class="fu">pivot_longer</span>(</span>
-<span id="cb43-4"><a href=""></a>    <span class="fu">everything</span>(), </span>
-<span id="cb43-5"><a href=""></a>    <span class="at">values_transform =</span> vecvec<span class="sc">::</span>vecvec</span>
-<span id="cb43-6"><a href=""></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb43-2"><a></a>household <span class="sc">|&gt;</span> </span>
+<span id="cb43-3"><a></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb43-4"><a></a>    <span class="fu">everything</span>(), </span>
+<span id="cb43-5"><a></a>    <span class="at">values_transform =</span> vecvec<span class="sc">::</span>vecvec</span>
+<span id="cb43-6"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 25 × 2
    name             value
@@ -959,12 +959,12 @@ attr(,"tzone")
 <div class="callout-content">
 <p>Putting it all together…</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href=""></a><span class="fu">library</span>(distributional)</span>
-<span id="cb45-2"><a href=""></a>dist <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb45-3"><a href=""></a>  <span class="fu">dist_poisson</span>(<span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">6</span>)),</span>
-<span id="cb45-4"><a href=""></a>  <span class="fu">dist_normal</span>(<span class="at">mu =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="sc">-</span><span class="dv">1</span>), <span class="at">sigma =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">4</span>))</span>
-<span id="cb45-5"><a href=""></a>)</span>
-<span id="cb45-6"><a href=""></a>dist</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a></a><span class="fu">library</span>(distributional)</span>
+<span id="cb45-2"><a></a>dist <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb45-3"><a></a>  <span class="fu">dist_poisson</span>(<span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">6</span>)),</span>
+<span id="cb45-4"><a></a>  <span class="fu">dist_normal</span>(<span class="at">mu =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="sc">-</span><span class="dv">1</span>), <span class="at">sigma =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">4</span>))</span>
+<span id="cb45-5"><a></a>)</span>
+<span id="cb45-6"><a></a>dist</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;distribution[6]&gt;
 [1] Pois(4)   Pois(2)   Pois(6)   N(1, 9)   N(3, 4)  
@@ -983,7 +983,7 @@ attr(,"tzone")
 <div class="callout-content">
 <p>Since distributions share common semantics, we can apply statistical operations across them.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href=""></a><span class="fu">density</span>(dist, <span class="at">at =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a></a><span class="fu">density</span>(dist, <span class="at">at =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.07326256 0.27067057 0.01487251 0.13298076 0.12098536
 [6] 0.08801633</code></pre>
@@ -1015,10 +1015,10 @@ attr(,"tzone")
 <div class="callout-content">
 <p>All distributions in the package start with <code>dist_*()</code>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href=""></a>dist <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb49-2"><a href=""></a>  <span class="fu">dist_poisson</span>(<span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">6</span>)),</span>
-<span id="cb49-3"><a href=""></a>  <span class="fu">dist_normal</span>(<span class="at">mu =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="sc">-</span><span class="dv">1</span>), <span class="at">sigma =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">4</span>))</span>
-<span id="cb49-4"><a href=""></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a></a>dist <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb49-2"><a></a>  <span class="fu">dist_poisson</span>(<span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">6</span>)),</span>
+<span id="cb49-3"><a></a>  <span class="fu">dist_normal</span>(<span class="at">mu =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="sc">-</span><span class="dv">1</span>), <span class="at">sigma =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">4</span>))</span>
+<span id="cb49-4"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>The package currently provides:</p>
 <ul>
@@ -1105,13 +1105,13 @@ attr(,"tzone")
 <h3 id="vectorised-distribution-statistics-2">Vectorised distribution statistics</h3>
 <p>Use distribution vectors in data frames!</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href=""></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb50-2"><a href=""></a><span class="fu">tibble</span>(</span>
-<span id="cb50-3"><a href=""></a>  <span class="at">dist =</span> <span class="fu">c</span>(</span>
-<span id="cb50-4"><a href=""></a>    <span class="fu">dist_poisson</span>(<span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">6</span>)),</span>
-<span id="cb50-5"><a href=""></a>    <span class="fu">dist_normal</span>(<span class="at">mu =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="sc">-</span><span class="dv">1</span>), <span class="at">sigma =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">4</span>))</span>
-<span id="cb50-6"><a href=""></a>  )</span>
-<span id="cb50-7"><a href=""></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb50-2"><a></a><span class="fu">tibble</span>(</span>
+<span id="cb50-3"><a></a>  <span class="at">dist =</span> <span class="fu">c</span>(</span>
+<span id="cb50-4"><a></a>    <span class="fu">dist_poisson</span>(<span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">6</span>)),</span>
+<span id="cb50-5"><a></a>    <span class="fu">dist_normal</span>(<span class="at">mu =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="sc">-</span><span class="dv">1</span>), <span class="at">sigma =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">4</span>))</span>
+<span id="cb50-6"><a></a>  )</span>
+<span id="cb50-7"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 1
 # ℹ 1 more variable: dist &lt;dist&gt;</code></pre>
@@ -1129,17 +1129,17 @@ attr(,"tzone")
 <h3 id="vectorised-distribution-statistics-3">Vectorised distribution statistics</h3>
 <p>Perform statistics alongside distributions.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href=""></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb52-2"><a href=""></a><span class="fu">tibble</span>(</span>
-<span id="cb52-3"><a href=""></a>  <span class="at">dist =</span> <span class="fu">c</span>(</span>
-<span id="cb52-4"><a href=""></a>    <span class="fu">dist_poisson</span>(<span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">6</span>)),</span>
-<span id="cb52-5"><a href=""></a>    <span class="fu">dist_normal</span>(<span class="at">mu =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="sc">-</span><span class="dv">1</span>), <span class="at">sigma =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">4</span>))</span>
-<span id="cb52-6"><a href=""></a>  )</span>
-<span id="cb52-7"><a href=""></a>) <span class="sc">|&gt;</span> </span>
-<span id="cb52-8"><a href=""></a>  <span class="fu">mutate</span>(</span>
-<span id="cb52-9"><a href=""></a>    <span class="at">mean =</span> <span class="fu">mean</span>(dist), <span class="at">var =</span> <span class="fu">variance</span>(dist),</span>
-<span id="cb52-10"><a href=""></a>    <span class="at">pdf =</span> <span class="fu">density</span>(dist, <span class="dv">1</span>), <span class="at">cdf =</span> <span class="fu">cdf</span>(dist, <span class="dv">1</span>)</span>
-<span id="cb52-11"><a href=""></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb52-2"><a></a><span class="fu">tibble</span>(</span>
+<span id="cb52-3"><a></a>  <span class="at">dist =</span> <span class="fu">c</span>(</span>
+<span id="cb52-4"><a></a>    <span class="fu">dist_poisson</span>(<span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">6</span>)),</span>
+<span id="cb52-5"><a></a>    <span class="fu">dist_normal</span>(<span class="at">mu =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="sc">-</span><span class="dv">1</span>), <span class="at">sigma =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">4</span>))</span>
+<span id="cb52-6"><a></a>  )</span>
+<span id="cb52-7"><a></a>) <span class="sc">|&gt;</span> </span>
+<span id="cb52-8"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb52-9"><a></a>    <span class="at">mean =</span> <span class="fu">mean</span>(dist), <span class="at">var =</span> <span class="fu">variance</span>(dist),</span>
+<span id="cb52-10"><a></a>    <span class="at">pdf =</span> <span class="fu">density</span>(dist, <span class="dv">1</span>), <span class="at">cdf =</span> <span class="fu">cdf</span>(dist, <span class="dv">1</span>)</span>
+<span id="cb52-11"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 5
        dist  mean   var    pdf    cdf
@@ -1162,7 +1162,7 @@ attr(,"tzone")
 <h3 id="modifying-distributions">Modifying distributions</h3>
 <p>Distributions can be transformed using mathematical operations.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href=""></a><span class="fu">dist_normal</span>(<span class="dv">1</span>,<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a></a><span class="fu">dist_normal</span>(<span class="dv">1</span>,<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;distribution[1]&gt;
 [1] N(1, 9)</code></pre>
@@ -1170,7 +1170,7 @@ attr(,"tzone")
 </div>
 <div class="fragment fade-in">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href=""></a><span class="dv">2</span> <span class="sc">+</span> <span class="fu">dist_normal</span>(<span class="dv">1</span>,<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a></a><span class="dv">2</span> <span class="sc">+</span> <span class="fu">dist_normal</span>(<span class="dv">1</span>,<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;distribution[1]&gt;
 [1] N(3, 9)</code></pre>
@@ -1179,7 +1179,7 @@ attr(,"tzone")
 </div>
 <div class="fragment fade-in">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href=""></a><span class="dv">3</span> <span class="sc">*</span> (<span class="dv">2</span> <span class="sc">+</span> <span class="fu">dist_normal</span>(<span class="dv">1</span>,<span class="dv">3</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a></a><span class="dv">3</span> <span class="sc">*</span> (<span class="dv">2</span> <span class="sc">+</span> <span class="fu">dist_normal</span>(<span class="dv">1</span>,<span class="dv">3</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;distribution[1]&gt;
 [1] N(9, 81)</code></pre>
@@ -1188,7 +1188,7 @@ attr(,"tzone")
 </div>
 <div class="fragment fade-in">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href=""></a><span class="fu">exp</span>(<span class="dv">3</span> <span class="sc">*</span> (<span class="dv">2</span> <span class="sc">+</span> <span class="fu">dist_normal</span>(<span class="dv">1</span>,<span class="dv">3</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a></a><span class="fu">exp</span>(<span class="dv">3</span> <span class="sc">*</span> (<span class="dv">2</span> <span class="sc">+</span> <span class="fu">dist_normal</span>(<span class="dv">1</span>,<span class="dv">3</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;distribution[1]&gt;
 [1] lN(9, 81)</code></pre>
@@ -1214,7 +1214,7 @@ attr(,"tzone")
 <div class="callout-content">
 <p><code>dist_transformed()</code> enables arbitrary transformations.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href=""></a>(<span class="dv">3</span> <span class="sc">*</span> (<span class="dv">2</span> <span class="sc">+</span> <span class="fu">dist_normal</span>(<span class="dv">1</span>,<span class="dv">3</span>)))<span class="sc">^</span><span class="dv">2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a></a>(<span class="dv">3</span> <span class="sc">*</span> (<span class="dv">2</span> <span class="sc">+</span> <span class="fu">dist_normal</span>(<span class="dv">1</span>,<span class="dv">3</span>)))<span class="sc">^</span><span class="dv">2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;distribution[1]&gt;
 [1] t(N(9, 81))</code></pre>
@@ -1257,9 +1257,9 @@ attr(,"tzone")
 <p>📅 Temporal</p>
 <div class="fragment fade-out" data-fragment-index="1">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href=""></a><span class="fu">library</span>(mixtime)</span>
-<span id="cb64-2"><a href=""></a>today <span class="ot">&lt;-</span> <span class="fu">Sys.Date</span>()</span>
-<span id="cb64-3"><a href=""></a><span class="fu">c</span>(<span class="fu">year</span>(today), <span class="fu">yearquarter</span>(today), <span class="fu">yearmonth</span>(today))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a></a><span class="fu">library</span>(mixtime)</span>
+<span id="cb64-2"><a></a>today <span class="ot">&lt;-</span> <span class="fu">Sys.Date</span>()</span>
+<span id="cb64-3"><a></a><span class="fu">c</span>(<span class="fu">year</span>(today), <span class="fu">yearquarter</span>(today), <span class="fu">yearmonth</span>(today))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;mixtime[3]&gt;
 [1] 2025     2025-Q4  2025-Dec</code></pre>
@@ -1274,8 +1274,8 @@ attr(,"tzone")
 </div>
 <p>🗺️ Spatial</p>
 <div class="fragment fade-out" data-fragment-index="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href=""></a><span class="fu">library</span>(sf)</span>
-<span id="cb66-2"><a href=""></a><span class="fu">c</span>(<span class="fu">st_point</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>)), <span class="fu">st_linestring</span>(<span class="fu">rbind</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>),<span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>),<span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">1</span>))), <span class="fu">st_polygon</span>(<span class="fu">list</span>(<span class="fu">rbind</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">0</span>), <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>), <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">4</span>), <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)))))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a></a><span class="fu">library</span>(sf)</span>
+<span id="cb66-2"><a></a><span class="fu">c</span>(<span class="fu">st_point</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>)), <span class="fu">st_linestring</span>(<span class="fu">rbind</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>),<span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>),<span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">1</span>))), <span class="fu">st_polygon</span>(<span class="fu">list</span>(<span class="fu">rbind</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">0</span>), <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>), <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">4</span>), <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)))))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>Geometry set for 3 features 
@@ -1295,8 +1295,8 @@ Geodetic CRS:  WGS 84</code></pre>
 </div>
 <p>🗳️ Preferential</p>
 <div class="fragment fade-out" data-fragment-index="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href=""></a><span class="fu">library</span>(prefio)</span>
-<span id="cb68-2"><a href=""></a><span class="fu">read_preflib</span>(<span class="st">"00004 - netflix/00004-00000138.soc"</span>, <span class="at">from_preflib =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a></a><span class="fu">library</span>(prefio)</span>
+<span id="cb68-2"><a></a><span class="fu">read_preflib</span>(<span class="st">"00004 - netflix/00004-00000138.soc"</span>, <span class="at">from_preflib =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] [Beverly Hills Cop &gt; Mean Girls &gt; Mission: Impossible II &gt; The Mummy Returns]
@@ -1311,8 +1311,8 @@ Geodetic CRS:  WGS 84</code></pre>
 <div class="pkg">
 <p>🕸️ Graph <img data-src="media/graphvec.svg"></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href=""></a><span class="fu">library</span>(graphvec)</span>
-<span id="cb70-2"><a href=""></a><span class="fu">edge_vec</span>(<span class="at">from =</span> <span class="fu">c</span>(<span class="dv">1</span>L, <span class="dv">2</span>L, <span class="dv">1</span>L), <span class="at">to =</span> <span class="fu">c</span>(<span class="dv">2</span>L, <span class="dv">3</span>L, <span class="dv">3</span>L), <span class="at">nodes =</span> <span class="fu">data.frame</span>(<span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">label =</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a></a><span class="fu">library</span>(graphvec)</span>
+<span id="cb70-2"><a></a><span class="fu">edge_vec</span>(<span class="at">from =</span> <span class="fu">c</span>(<span class="dv">1</span>L, <span class="dv">2</span>L, <span class="dv">1</span>L), <span class="at">to =</span> <span class="fu">c</span>(<span class="dv">2</span>L, <span class="dv">3</span>L, <span class="dv">3</span>L), <span class="at">nodes =</span> <span class="fu">data.frame</span>(<span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">label =</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;edge_vec[3]&gt;
 [1] [1:A]-&gt;[2:B] [2:B]-&gt;[3:C] [1:A]-&gt;[3:C]</code></pre>
@@ -1353,10 +1353,10 @@ Geodetic CRS:  WGS 84</code></pre>
 <h3 id="combining-semantic-vectors-1">Combining semantic vectors</h3>
 <p><img data-src="media/fable.svg" class="sticker-float-right"></p>
 <p>Forecasts from <code>{fable}</code> combines <code>{mixtime}</code> and <code>{distributional}</code> vectors.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb72"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href=""></a><span class="fu">library</span>(fable)</span>
-<span id="cb72-2"><a href=""></a>sunspots_tsbl <span class="sc">|&gt;</span> </span>
-<span id="cb72-3"><a href=""></a>  <span class="fu">model</span>(<span class="fu">ARIMA</span>(value)) <span class="sc">|&gt;</span> </span>
-<span id="cb72-4"><a href=""></a>  <span class="fu">forecast</span>(<span class="at">h =</span> <span class="st">"10 years"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb72"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a></a><span class="fu">library</span>(fable)</span>
+<span id="cb72-2"><a></a>sunspots_tsbl <span class="sc">|&gt;</span> </span>
+<span id="cb72-3"><a></a>  <span class="fu">model</span>(<span class="fu">ARIMA</span>(value)) <span class="sc">|&gt;</span> </span>
+<span id="cb72-4"><a></a>  <span class="fu">forecast</span>(<span class="at">h =</span> <span class="st">"10 years"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code># A fable: 10 x 4 [1Y]
@@ -1544,7 +1544,7 @@ htmltools::includeMarkdown(paste0(map_chr(ids, get_unsplash_credit), collapse = 
 <div class="column" style="width:60%;">
 <h3 id="vectorised-operations-vectors">Vectorised operations (vectors)</h3>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href=""></a>(y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">dist_normal</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="fu">dist_beta</span>(<span class="dv">5</span>, <span class="dv">1</span>), <span class="fu">dist_gamma</span>(<span class="dv">2</span>, <span class="dv">1</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a></a>(y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">dist_normal</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="fu">dist_beta</span>(<span class="dv">5</span>, <span class="dv">1</span>), <span class="fu">dist_gamma</span>(<span class="dv">2</span>, <span class="dv">1</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;distribution[3]&gt;
 [1] N(0, 1)    Beta(5, 1) Γ(2, 1)   </code></pre>
@@ -1552,11 +1552,11 @@ htmltools::includeMarkdown(paste0(map_chr(ids, get_unsplash_credit), collapse = 
 </div>
 <p>Vectors/matrices apply the same operation inputs to each distribution.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href=""></a><span class="fu">density</span>(y, <span class="at">at =</span> <span class="fl">0.65</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a></a><span class="fu">density</span>(y, <span class="at">at =</span> <span class="fl">0.65</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.3229724 0.8925312 0.3393298</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb78"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href=""></a><span class="fu">density</span>(y, <span class="at">at =</span> <span class="fu">c</span>(<span class="fl">0.65</span>, <span class="fl">0.9</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb78"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a></a><span class="fu">density</span>(y, <span class="at">at =</span> <span class="fu">c</span>(<span class="fl">0.65</span>, <span class="fl">0.9</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
 [1] 0.3229724 0.2660852
@@ -1587,8 +1587,8 @@ htmltools::includeMarkdown(paste0(map_chr(ids, get_unsplash_credit), collapse = 
 <div class="callout-content">
 <p>This also works well with data frames.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb80"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href=""></a>tibble<span class="sc">::</span><span class="fu">tibble</span>(y) <span class="sc">|&gt;</span> </span>
-<span id="cb80-2"><a href=""></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="fu">density</span>(y, <span class="at">at =</span> <span class="fl">0.65</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb80"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a></a>tibble<span class="sc">::</span><span class="fu">tibble</span>(y) <span class="sc">|&gt;</span> </span>
+<span id="cb80-2"><a></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="fu">density</span>(y, <span class="at">at =</span> <span class="fl">0.65</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
            y `density(y, at = 0.65)`
@@ -1601,8 +1601,8 @@ htmltools::includeMarkdown(paste0(map_chr(ids, get_unsplash_credit), collapse = 
 <div class="fragment fade-in">
 <p>Although its a bit tricky for more than one input.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb82"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href=""></a>tibble<span class="sc">::</span><span class="fu">tibble</span>(y) <span class="sc">|&gt;</span> </span>
-<span id="cb82-2"><a href=""></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="fu">density</span>(y, <span class="at">at =</span> <span class="fu">c</span>(<span class="fl">0.65</span>, <span class="fl">0.9</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb82"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a></a>tibble<span class="sc">::</span><span class="fu">tibble</span>(y) <span class="sc">|&gt;</span> </span>
+<span id="cb82-2"><a></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="fu">density</span>(y, <span class="at">at =</span> <span class="fu">c</span>(<span class="fl">0.65</span>, <span class="fl">0.9</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
            y `density(y, at = c(0.65, 0.9))`
@@ -1625,7 +1625,7 @@ htmltools::includeMarkdown(paste0(map_chr(ids, get_unsplash_credit), collapse = 
 <div class="column" style="width:60%;">
 <h3 id="vectorised-operations-lists">Vectorised operations (lists)</h3>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb84"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href=""></a>(y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">dist_normal</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="fu">dist_beta</span>(<span class="dv">5</span>, <span class="dv">1</span>), <span class="fu">dist_gamma</span>(<span class="dv">2</span>, <span class="dv">1</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb84"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a></a>(y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">dist_normal</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="fu">dist_beta</span>(<span class="dv">5</span>, <span class="dv">1</span>), <span class="fu">dist_gamma</span>(<span class="dv">2</span>, <span class="dv">1</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;distribution[3]&gt;
 [1] N(0, 1)    Beta(5, 1) Γ(2, 1)   </code></pre>
@@ -1633,14 +1633,14 @@ htmltools::includeMarkdown(paste0(map_chr(ids, get_unsplash_credit), collapse = 
 </div>
 <p>Lists/data.frames recycle each input argument to the length of distributions.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb86"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href=""></a><span class="fu">density</span>(y, <span class="at">at =</span> <span class="fu">list</span>(<span class="at">d1 =</span> <span class="fl">0.65</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb86"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a></a><span class="fu">density</span>(y, <span class="at">at =</span> <span class="fu">list</span>(<span class="at">d1 =</span> <span class="fl">0.65</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>         d1
 1 0.3229724
 2 0.8925312
 3 0.3393298</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb88"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href=""></a><span class="fu">density</span>(y, <span class="at">at =</span> <span class="fu">list</span>(<span class="at">d1 =</span> <span class="fl">0.65</span>, <span class="at">d2 =</span> <span class="fl">0.9</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb88"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a></a><span class="fu">density</span>(y, <span class="at">at =</span> <span class="fu">list</span>(<span class="at">d1 =</span> <span class="fl">0.65</span>, <span class="at">d2 =</span> <span class="fl">0.9</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>         d1        d2
 1 0.3229724 0.2660852
@@ -1657,7 +1657,7 @@ htmltools::includeMarkdown(paste0(map_chr(ids, get_unsplash_credit), collapse = 
 <div class="column" style="width:60%;">
 <h3 id="vectorised-operations-lists-1">Vectorised operations (lists)</h3>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb90"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href=""></a>(y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">dist_normal</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="fu">dist_beta</span>(<span class="dv">5</span>, <span class="dv">1</span>), <span class="fu">dist_gamma</span>(<span class="dv">2</span>, <span class="dv">1</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb90"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a></a>(y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">dist_normal</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="fu">dist_beta</span>(<span class="dv">5</span>, <span class="dv">1</span>), <span class="fu">dist_gamma</span>(<span class="dv">2</span>, <span class="dv">1</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;distribution[3]&gt;
 [1] N(0, 1)    Beta(5, 1) Γ(2, 1)   </code></pre>
@@ -1665,7 +1665,7 @@ htmltools::includeMarkdown(paste0(map_chr(ids, get_unsplash_credit), collapse = 
 </div>
 <p>This also allows vectorisation across both inputs and distributions.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb92"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href=""></a><span class="fu">density</span>(y, <span class="at">at =</span> <span class="fu">list</span>(<span class="at">dens =</span> <span class="fu">c</span>(<span class="fl">0.65</span>, <span class="fl">0.9</span>, <span class="fl">0.3</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb92"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a></a><span class="fu">density</span>(y, <span class="at">at =</span> <span class="fu">list</span>(<span class="at">dens =</span> <span class="fu">c</span>(<span class="fl">0.65</span>, <span class="fl">0.9</span>, <span class="fl">0.3</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       dens
 1 0.3229724
@@ -1684,7 +1684,7 @@ htmltools::includeMarkdown(paste0(map_chr(ids, get_unsplash_credit), collapse = 
 </div>
 <div class="callout-content">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb94"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href=""></a><span class="fu">density</span>(y, <span class="fu">list</span>(<span class="at">dens =</span> <span class="fu">c</span>(<span class="fl">0.65</span>, <span class="fl">0.9</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb94"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a></a><span class="fu">density</span>(y, <span class="fu">list</span>(<span class="at">dens =</span> <span class="fu">c</span>(<span class="fl">0.65</span>, <span class="fl">0.9</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-error">
 <pre><code>Error in `FUN()`:
 ! Cannot recycle input of size 2 to match the distributions (size 3).</code></pre>
@@ -1713,8 +1713,8 @@ htmltools::includeMarkdown(paste0(map_chr(ids, get_unsplash_credit), collapse = 
 <div class="callout-content">
 <p>This also works <em>really</em> well with data frames.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb96"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href=""></a>tibble<span class="sc">::</span><span class="fu">tibble</span>(y) <span class="sc">|&gt;</span> </span>
-<span id="cb96-2"><a href=""></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="fu">density</span>(y, <span class="at">at =</span> <span class="fu">list</span>(<span class="at">d1 =</span> <span class="fl">0.65</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb96"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a></a>tibble<span class="sc">::</span><span class="fu">tibble</span>(y) <span class="sc">|&gt;</span> </span>
+<span id="cb96-2"><a></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="fu">density</span>(y, <span class="at">at =</span> <span class="fu">list</span>(<span class="at">d1 =</span> <span class="fl">0.65</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
            y    d1
@@ -1727,10 +1727,10 @@ htmltools::includeMarkdown(paste0(map_chr(ids, get_unsplash_credit), collapse = 
 <div class="fragment fade-in">
 <p><code>mutate()</code> automatically unpacks the results if unnamed.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb98"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href=""></a>tibble<span class="sc">::</span><span class="fu">tibble</span>(y) <span class="sc">|&gt;</span> </span>
-<span id="cb98-2"><a href=""></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
-<span id="cb98-3"><a href=""></a>    <span class="fu">density</span>(y, <span class="at">at =</span> <span class="fu">list</span>(<span class="at">d1 =</span> <span class="fl">0.65</span>, <span class="at">d2 =</span> <span class="fl">0.9</span>))</span>
-<span id="cb98-4"><a href=""></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb98"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a></a>tibble<span class="sc">::</span><span class="fu">tibble</span>(y) <span class="sc">|&gt;</span> </span>
+<span id="cb98-2"><a></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
+<span id="cb98-3"><a></a>    <span class="fu">density</span>(y, <span class="at">at =</span> <span class="fu">list</span>(<span class="at">d1 =</span> <span class="fl">0.65</span>, <span class="at">d2 =</span> <span class="fl">0.9</span>))</span>
+<span id="cb98-4"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 3
            y    d1    d2
@@ -1755,16 +1755,16 @@ htmltools::includeMarkdown(paste0(map_chr(ids, get_unsplash_credit), collapse = 
 </div><div class="column" style="width:60%;">
 <h3 id="visualising-distributions-2">Visualising distributions</h3>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb100"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href=""></a><span class="fu">library</span>(ggdist)</span>
-<span id="cb100-2"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb100-3"><a href=""></a>df <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
-<span id="cb100-4"><a href=""></a>  <span class="at">name =</span> <span class="fu">c</span>(<span class="st">"Gamma(2,1)"</span>, <span class="st">"Normal(5,1)"</span>, <span class="st">"Mixture"</span>),</span>
-<span id="cb100-5"><a href=""></a>  <span class="at">dist =</span> <span class="fu">c</span>(<span class="fu">dist_gamma</span>(<span class="dv">2</span>,<span class="dv">1</span>), <span class="fu">dist_normal</span>(<span class="dv">5</span>,<span class="dv">1</span>),</span>
-<span id="cb100-6"><a href=""></a>           <span class="fu">dist_mixture</span>(<span class="fu">dist_gamma</span>(<span class="dv">2</span>,<span class="dv">1</span>), <span class="fu">dist_normal</span>(<span class="dv">5</span>, <span class="dv">1</span>), <span class="at">weights =</span> <span class="fu">c</span>(<span class="fl">0.4</span>, <span class="fl">0.6</span>)))</span>
-<span id="cb100-7"><a href=""></a>)</span>
-<span id="cb100-8"><a href=""></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">factor</span>(name, <span class="at">levels =</span> <span class="fu">rev</span>(name)))) <span class="sc">+</span></span>
-<span id="cb100-9"><a href=""></a>  <span class="fu">stat_dist_halfeye</span>(<span class="fu">aes</span>(<span class="at">dist =</span> dist)) <span class="sc">+</span> </span>
-<span id="cb100-10"><a href=""></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Density function for a mixture of distributions"</span>, <span class="at">y =</span> <span class="cn">NULL</span>, <span class="at">x =</span> <span class="cn">NULL</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb100"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a></a><span class="fu">library</span>(ggdist)</span>
+<span id="cb100-2"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb100-3"><a></a>df <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
+<span id="cb100-4"><a></a>  <span class="at">name =</span> <span class="fu">c</span>(<span class="st">"Gamma(2,1)"</span>, <span class="st">"Normal(5,1)"</span>, <span class="st">"Mixture"</span>),</span>
+<span id="cb100-5"><a></a>  <span class="at">dist =</span> <span class="fu">c</span>(<span class="fu">dist_gamma</span>(<span class="dv">2</span>,<span class="dv">1</span>), <span class="fu">dist_normal</span>(<span class="dv">5</span>,<span class="dv">1</span>),</span>
+<span id="cb100-6"><a></a>           <span class="fu">dist_mixture</span>(<span class="fu">dist_gamma</span>(<span class="dv">2</span>,<span class="dv">1</span>), <span class="fu">dist_normal</span>(<span class="dv">5</span>, <span class="dv">1</span>), <span class="at">weights =</span> <span class="fu">c</span>(<span class="fl">0.4</span>, <span class="fl">0.6</span>)))</span>
+<span id="cb100-7"><a></a>)</span>
+<span id="cb100-8"><a></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">factor</span>(name, <span class="at">levels =</span> <span class="fu">rev</span>(name)))) <span class="sc">+</span></span>
+<span id="cb100-9"><a></a>  <span class="fu">stat_dist_halfeye</span>(<span class="fu">aes</span>(<span class="at">dist =</span> dist)) <span class="sc">+</span> </span>
+<span id="cb100-10"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Density function for a mixture of distributions"</span>, <span class="at">y =</span> <span class="cn">NULL</span>, <span class="at">x =</span> <span class="cn">NULL</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -1776,6 +1776,7 @@ htmltools::includeMarkdown(paste0(map_chr(ids, get_unsplash_credit), collapse = 
 </div></div>
 <p><img data-src="backgrounds/jennie-razumnaya-XbcfTH69aAc-unsplash.jpg" class="image-left"></p>
 
+
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
@@ -1785,19 +1786,19 @@ htmltools::includeMarkdown(paste0(map_chr(ids, get_unsplash_credit), collapse = 
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="index_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="index_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -2236,7 +2237,7 @@ htmltools::includeMarkdown(paste0(map_chr(ids, get_unsplash_credit), collapse = 
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp('/' + window.location.host + '/');
+            var filterRegex = new RegExp("https:\/\/mitchelloharawild\.github\.io\/talk-vectorised-statistics\/");
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }
