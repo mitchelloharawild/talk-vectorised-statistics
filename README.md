@@ -47,8 +47,17 @@ suitable for working with time series forecasts.
 
 #### Structure
 
-…
+1.  R as a *vectorised* statistics language (see also ‘Keep R weird’)
+2.  What are vectors (and what are *records*)? A brief introduction to
+    the vctrs package.
+3.  Semantic variables vectors (time, distribution, spatial, graph, …)
+4.  Basics of distributional vectors (single distribution types).
+5.  Mixed type vectors of vectors. A brief showcase of the vecvec
+    package.
+6.  Operations on semantic vectors with the distributional package.
+7.  Other semantic vectors (mixtime, graphvec, sf).
+8.  Combining semantic variables (distributional+mixtime == forecasts)
 
 ### Format
 
-Oral presentation
+18 minutes (15 minute talk, 3 minute Q&A)
